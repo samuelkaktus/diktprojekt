@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
-  <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-8 text-center">
+  <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-8 text-center">
     <h1 class="text-3xl font-semibold mb-2">Dagens dikt</h1>
     <p class="text-gray-600 italic mb-4">av Kai Henmark</p>
     <div id="poem" class="text-gray-800 whitespace-pre-line text-left"></div>
@@ -17,31 +17,222 @@
   <script>
     const poems = [
       {
-        title: "Morgonljus",
-        text: `När solen lyfter skuggorna
-och natten drar sin sista suck
-så går jag ut i världen
-och känner hoppet återvända.`
+        title: "Där spårar jag livets växt",
+        text: `I hennes sköte spårar jag livets växt
+Som i Marx väldiga skägg
+Där spårar jag livets växt
+Som i vecket mellan masken och ansiktet
+Där spårar jag livets växt
+Som i Gehennas dal, dess skäggiga sidor av ogräs och timjan
+Där spårar jag livets växt
+Som i nattens öppning mot ljuset, opalen som blänar till gryning
+Där spårar jag livets växt
+Som i gossarnas kamp i bergen för en frihet de inte känner
+Där spårar jag livets växt
+Som i de rodnande fälten av nyutsprucken vallmo
+Där spårar jag livets växt
+Som i de sånger jag hörde från bergens sprickor
+Där spårar jag livets växt
+Som ock i den sista cikadans rop
+Där spårar jag livets växt
+Som ock i det multnande, som ock i avfallets ångor
+Där spårar jag livets växt
+Som ock i dina rynkor
+Som ock i din trevan, de fallande slingorna
+Där spårar jag livets växt
+I hennes sköte spårar jag livets växt`
       },
       {
-        title: "Skymningssång",
-        text: `I skymningens stilla sken
-tystnar staden, tanken går hem
-Där väntar en dikt, ett andetag
-från Kai i dagens sista dag.`
+        title: "Jag finner inte dej",
+        text: `Jag finner inte dej
+din tanke
+orden i örat finner jag
+i trycket frånvaron av tryck
+i själva luften som dej omger
+och som mej omger
+
+Jag finner inte dej
+din doft jag finner
+textens kraftiga arom och ropets
+stavelsers, konsonanters och vokalers
+konsonanters särskilt väsande i livets bru-hu-hu-hus
+och som mej omger
+
+Jag finner inte dej
+din ande finner jag
+din dunst din första suck
+din törst din hunger
+ängslan – att du dödde
+ja jag finner inte dej
+ditt os jag finner
+som mej omger
+
+Jag finner inte dej
+mitt uttryck finner jag
+min tunga och min växt
+
+min tunga och min text, min svans
+och draget från dess svep
+allt som mej omger
+
+Jag finner inte dej
+en fläkt är allt jag finner
+Jag finner inte mej
+en fläkt som omger dej och mej
+och som oss samman fogar`
       },
       {
-        title: "Eko i skogen",
-        text: `En viskning bland träden
-blir ett rop i mitt bröst
-Kai följer stigarna inåt
-där orden aldrig dör.`
+        title: "I min spegel",
+        text: `När jag ser mej i spegeln
+ser jag dej
+Ditt leende ser jag, din gråt
+
+Allt jag ser
+Ditt ansikte finns i mitt öga
+
+Min dröm är att möta dej naken
+Utan förskräckelse
+
+Djupt under snön en iglo
+Där människan ser sej själv i sej själv
+
+Och blir kvar
+Och gråten och skratten
+Jag rider den livslånga natten
+till gryning
+
+Och de sammansvetsade ögonen
+fuktas av daggen`
+      },
+      {
+        title: "Mitt i rummet",
+        text: `jag skulle vilja tala med dej
+och medan jag talar med dej ...
+håret växer och skägget, porerna vidgas, våra kärl bryts ner, förkalkas
+och vi själva efterhand försvinner, dör, blir jord
+
+för mycket har jag ingen tid
+allt som måste göras dödar mej, livar mej, berövar mej och begåvar mej
+och kastar mej åter och åter framåt, tillbaka
+jag bor i min cirkus fast min cirkus är inte jag
+
+jag upphör i det ögonblick jag icke vet
+det kalla slår mej över hals och hjässa
+det slår mej utan att jag känner något, det lyfter mej utan att jag tynger
+och utan kamp är det som jag färdas, utan all oro, utan all yrsel
+
+inte längtar jag, inte fruktar jag
+inte längtar jag inte, inte fruktar jag inte
+synfälten flyttas, tangenterna blandas
+allt jag gör har tusen dimensioner
+allt jag inte gör har bara en: är död
+
+utsträckt uppsträckt uttänjd lever jag mellanrummet
+och till ingendera porten äger jag nyckel
+
+medan det pågår vistas jag mitt i rummet`
+      },
+      {
+        title: "Havet är yngre än jag",
+        text: `ser ju barna växa
+idliga blöjbyten
+nya kälkar och tröjor
+jackor, kavajer
+levande knyten
+och besynnerliga prylar under sängen
+
+högre än tallarna
+själv blir jag kortare
+tuggar mina enbär
+
+och barna ropar till mej:
+"hitta några fåglar
+på väg till Egypten
+fick lift och vi flög
+ovan molnen
+vet inte riktigt vad gökarna
+hette
+men landet var proppfullt med honung"
+
+själv tuggar jag krasse
+rabatterna
+räfsar jag
+sopar och bökar`
+      },
+      {
+        title: "Hela huset",
+        text: `överallt i mitt hjärta
+trängs vandalerna
+ideligen bankar de
+inifrån
+på de bräckliga portarna
+
+jag är själv mitt hus
+men det vilar samtidigt
+ovanom och omkring
+mej själv
+
+och uppifrån taken reser sej
+spretiga tinnar
+
+de har en förfärlig ovana
+att darra
+
+men i förtroende försäkrar mej min far:
+du har ju också varit ung – gamle gosse!`
+      },
+      {
+        title: "En vild plantering",
+        text: `Jag minns en vild plantering
+vass till knäna
+att slå vass, att skära
+var ett jobb, ett utflyktsmål
+
+lie, lunchpaket och salt och värme
+
+farfar på en sten att speja
+snus i tanden
+käpp i handen
+knotor
+ögon
+yxan spretig
+
+fordrande som gud i skogens skägg`
+      },
+      {
+        title: "MIG -35",
+        text: `resenärerna hopas
+mot väskorna lutar sej
+utsträckt fisk
+uppbrottsstämplad
+i solens sken
+
+gatans elefant
+har stämt sitt instrument
+och plötsligen
+lyfter en fågel
+en brinnande fågel
+från planens kaskad
+
+den faller i plaskdammens vatten
+bland båtar och dockor
+så färgas nu vågorna blåa
+från odjurets tindrande vingar
+och mammorna spottar förfäran
+över krattade gångar
+genast blir ögonen suddiga
+fyllda av rutat damm
+
+då inträder tjuren
+och här
+matadoren
+betvingaren`
       }
     ];
 
     function getPoemOfTheDay() {
-      const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-      const seed = parseInt(today.replace(/-/g, ''), 10); // YYYYMMDD som tal
+      const today = new Date().toISOString().split('T')[0];
+      const seed = parseInt(today.replace(/-/g, ''), 10);
       const index = seed % poems.length;
       return poems[index];
     }
