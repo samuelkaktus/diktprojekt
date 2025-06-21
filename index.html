@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dagens dikt – Kai Henmark</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-8 text-center">
+    <h1 class="text-3xl font-semibold mb-2">Dagens dikt</h1>
+    <p class="text-gray-600 italic mb-4">av Kai Henmark</p>
+    <div id="poem" class="text-gray-800 whitespace-pre-line text-left"></div>
+    <p id="title" class="text-right text-sm text-gray-500 mt-6"></p>
+  </div>
+
+  <script>
+    const poems = [
+      {
+        title: "Morgonljus",
+        text: `När solen lyfter skuggorna
+och natten drar sin sista suck
+så går jag ut i världen
+och känner hoppet återvända.`
+      },
+      {
+        title: "Skymningssång",
+        text: `I skymningens stilla sken
+tystnar staden, tanken går hem
+Där väntar en dikt, ett andetag
+från Kai i dagens sista dag.`
+      },
+      {
+        title: "Eko i skogen",
+        text: `En viskning bland träden
+blir ett rop i mitt bröst
+Kai följer stigarna inåt
+där orden aldrig dör.`
+      }
+    ];
+
+    function getPoemOfTheDay() {
+      const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+      const seed = parseInt(today.replace(/-/g, ''), 10); // YYYYMMDD som tal
+      const index = seed % poems.length;
+      return poems[index];
+    }
+
+    const poem = getPoemOfTheDay();
+    document.getElementById("poem").textContent = poem.text;
+    document.getElementById("title").textContent = poem.title;
+  </script>
+</body>
+</html>
