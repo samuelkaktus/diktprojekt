@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dagens dikt – Kai Henmark</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
-  <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-8 text-center">
-    <h1 class="text-3xl font-semibold mb-2">Dagens dikt</h1>
-    <p class="text-gray-600 italic mb-4">av Kai Henmark</p>
-    <div id="poem" class="text-gray-800 whitespace-pre-line text-left"></div>
-    <p id="title" class="text-right text-sm text-gray-500 mt-6"></p>
+<body class="bg-gradient-to-br from-gray-100 via-white to-gray-200 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white/70 backdrop-blur-md rounded-3xl shadow-2xl max-w-3xl w-full px-10 py-12 text-center border border-gray-300">
+    <h1 class="text-4xl font-bold mb-2 text-gray-800">Dagens dikt</h1>
+    <p class="text-gray-600 italic mb-6 text-lg">av Kai Henmark</p>
+    <div id="poem" class="text-gray-900 whitespace-pre-line text-left leading-relaxed text-lg"></div>
+    <p id="title" class="text-right text-sm text-gray-500 mt-8 italic"></p>
   </div>
 
   <script>
